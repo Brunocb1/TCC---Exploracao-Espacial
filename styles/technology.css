@@ -1,0 +1,133 @@
+.technology {
+  background-image: url(../assets/technology/background-technology-desktop.jpg);
+}
+
+@media screen and (max-width: 768px) {
+  .technology {
+    background-image: url(../assets/technology/background-technology-mobile.jpg);
+    background-size: cover;
+  }
+}
+
+.hero {
+  padding: 76px 0 100px 165px;
+}
+
+.hero h5 span {
+  opacity: 0.25;
+  font-weight: 700;
+}
+
+.hero .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero .content .text {
+  display: flex;
+  gap: 80px;
+}
+
+.hero .content .text .navigation .navigation-circle {
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  display: block;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  font-family: Bellefair;
+  font-size: 2rem;
+  margin-bottom: 32px;
+  transition: var(--transition);
+}
+
+.hero .content .text .navigation .navigation-circle:last-of-type {
+  margin-bottom: 0;
+}
+
+.hero .content .text .navigation .navigation-circle:hover {
+  border-color: rgba(255, 255, 255, 1);
+}
+
+.hero .content .text .navigation .navigation-circle.active {
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+
+.content .text p:first-of-type {
+  color: var(--color-pastel-blue);
+  font-family: Barlow-condensed;
+  font-size: 1rem;
+  letter-spacing: 2.7px;
+}
+.content .text h3 {
+  margin: 5px 0 17px 0;
+}
+.content .image {
+  overflow: hidden;
+}
+
+.content .image img {
+  transition: var(--transition);
+}
+
+.content .image img:hover {
+  scale: 1.1;
+}
+
+.tablet-img {
+  display: none;
+}
+
+@media screen and (max-width: 1080px) {
+  .hero {
+    padding-inline: 0;
+  }
+  .hero .content .text {
+    display: flex;
+    gap: 20px;
+  }
+
+  h5 {
+    margin-bottom: 60px;
+  }
+
+  .content {
+    flex-direction: column-reverse;
+    gap: 56px;
+  }
+
+  .desktop-img {
+    display: none;
+  }
+
+  .tablet-img {
+    display: block;
+    min-width: 100%;
+    height: 175px;
+  }
+
+  .content .image {
+    min-width: 100%;
+  }
+
+  .text {
+    flex-direction: column;
+    text-align: center;
+    padding-inline: 24px;
+  }
+
+  .navigation {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+  }
+  .hero .content .text .navigation .navigation-circle {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+}

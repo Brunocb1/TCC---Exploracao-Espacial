@@ -1,0 +1,126 @@
+.destination {
+  background-image: url(../assets/destination/background-destination-desktop.jpg);
+}
+
+@media screen and (max-width: 768px) {
+  .destination {
+    background-image: url(../assets/destination/background-destination-mobile.jpg);
+  }
+}
+
+.hero {
+  padding-top: 76px;
+  padding-bottom: 120px;
+}
+
+.hero h5 span {
+  opacity: 0.25;
+  font-weight: 700;
+}
+
+.content {
+  display: flex;
+  margin-top: 64px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content .image {
+  flex: 0 0 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.content .image img {
+  width: 445px;
+  height: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .content .image img {
+    width: 170px;
+  }
+}
+
+.content .text h2 {
+  margin-block: 40px;
+}
+
+.content .text ul {
+  gap: 36px;
+}
+
+.content .text ul a:hover {
+  padding-bottom: 12px;
+}
+
+.content .text ul a.active {
+  padding-bottom: 12px;
+}
+
+.text .destination-details {
+  display: flex;
+  gap: 80px;
+  margin-top: 54px;
+  border-top: 1px solid #383b4b;
+  padding-top: 28px;
+}
+
+.text .destination-details p:first-of-type {
+  margin-bottom: 12px;
+}
+
+@media screen and (max-width: 768px) {
+  .content .text ul {
+    gap: 26px;
+  }
+  .content .text ul a {
+    font-size: 14px;
+  }
+  .content .text ul a:hover {
+    padding-bottom: 8px;
+  }
+
+  .content .text ul a.active {
+    padding-bottom: 8px;
+  }
+
+  .content .text h2 {
+    margin-bottom: 10px;
+  }
+  .text .destination-details {
+    flex-direction: column;
+    padding-top: 32px;
+    margin-top: 33px;
+    gap: 32px;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .destination .container {
+    padding-inline: 38px;
+  }
+
+  .destination .content {
+    flex-direction: column;
+    gap: 54px;
+    text-align: center;
+  }
+
+  .destination .content ul {
+    justify-content: center;
+  }
+
+  .destination-details {
+    justify-content: center;
+  }
+
+  .destination .content div {
+    max-width: 574px;
+    width: 100%;
+  }
+
+  .description {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,96 @@
+.home {
+  background-image: url(../assets/home/background-home-desktop.jpg);
+}
+
+@media screen and (max-width: 768px) {
+  .home {
+    background-image: url(../assets/home/background-home-mobile.jpg);
+  }
+}
+
+.hero {
+  padding-top: 250px;
+  padding-bottom: 130px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.hero .text,
+.explore {
+  flex: 0 0 50%;
+}
+
+.hero .explore {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero .explore .explore-btn {
+  background-color: var(--color-white);
+  width: 274px;
+  height: 274px;
+  border-radius: 50%;
+  display: block;
+  position: relative;
+}
+
+.hero .explore .explore-btn p {
+  color: var(--color-black);
+  font-family: Bellefair;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero .explore .explore-btn::before {
+  content: "";
+  width: 274px;
+  height: 274px;
+  border-radius: 50%;
+  position: absolute;
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  background-color: var(--color-white);
+  opacity: 0;
+  left: 0;
+}
+
+.hero .explore .explore-btn:hover::before {
+  scale: 1.6;
+  opacity: 0.1;
+}
+
+@media screen and (max-width: 1080px) {
+  .hero {
+    flex-direction: column;
+    padding-top: 60px;
+    padding-inline: 24px;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    text-align: center;
+  }
+
+  .hero h5 {
+    font-size: 1rem;
+  }
+
+  .description {
+    font-size: 15px;
+  }
+
+  .hero .explore .explore-btn {
+    width: 150px;
+    height: 150px;
+  }
+  .hero .explore .explore-btn p {
+    font-size: 20px;
+  }
+
+  .hero .explore .explore-btn:hover::before {
+    left: 0;
+  }
+}

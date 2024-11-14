@@ -1,0 +1,311 @@
+:root {
+  --color-white: #fff;
+  --color-black: #0b0d17;
+  --color-pastel-blue: #d0d6f9;
+
+  --base-font-size: 1.125rem;
+
+  --transition: all 0.3s ease-in-out;
+}
+
+@font-face {
+  font-family: "Bellefair";
+  src: url(../assets/fonts/Bellefair-Regular.otf);
+}
+
+@font-face {
+  font-family: "Barlow-regular";
+  src: url(../assets/fonts/Barlow-Regular.otf);
+}
+
+@font-face {
+  font-family: "Barlow-condensed";
+  src: url(../assets/fonts/BarlowCondensed-Regular.otf);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Barlow-regular;
+  color: var(--color-white);
+  background-color: var(--color-black);
+}
+
+ul {
+  list-style: none;
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  font-family: Barlow-condensed;
+  font-size: 16px;
+  letter-spacing: 2.7px;
+  text-transform: uppercase;
+  transition: var(--transition);
+}
+
+a:hover {
+  border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+  padding-bottom: 38px;
+}
+
+a.active {
+  border-bottom: 3px solid var(--color-white);
+  padding-bottom: 38px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1 {
+  font-size: 9.375rem;
+  margin-block: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 5rem;
+  }
+}
+
+h2 {
+  font-size: 6.25rem;
+}
+
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 3.5rem;
+  }
+}
+
+h3 {
+  font-size: 3.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  h4 {
+    font-size: 1rem;
+  }
+}
+
+h5 {
+  color: var(--color-pastel-blue);
+  font-family: Barlow-condensed;
+  font-size: 1.75rem;
+  font-weight: 400;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 768px) {
+  h5 {
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 400;
+  text-transform: uppercase;
+  font-family: Bellefair, sans-serif;
+}
+
+.subheading-one {
+  font-family: Bellefair;
+  font-size: 1.75rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.subheading-two {
+  font-family: Barlow-condensed;
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.14763rem;
+  text-transform: uppercase;
+}
+
+.description {
+  color: var(--color-pastel-blue);
+  font-size: 1.125rem;
+  line-height: 2rem;
+  max-width: 440px;
+}
+
+@media screen and (max-width: 768px) {
+  .description {
+    font-size: 15px;
+  }
+}
+
+.container {
+  padding-inline: 165px;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding-inline: 24px;
+  }
+}
+
+.wrapper {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 64px 0 0 55px;
+}
+
+nav ul {
+  gap: 48px;
+  padding: 40px 150px;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(40px);
+  position: relative;
+}
+
+nav ul li span {
+  font-weight: 700;
+}
+
+nav ul::before {
+  content: "";
+  width: 573px;
+  height: 1px;
+  opacity: 0.2515;
+  background: var(--color-white);
+  position: absolute;
+  top: 50%;
+  left: -65%;
+}
+
+nav input {
+  display: none;
+}
+
+@media screen and (max-width: 1080px) {
+  .wrapper header nav ul li a span {
+    display: none;
+  }
+
+  nav ul::before {
+    display: none;
+  }
+
+  nav ul {
+    padding: 40px 48px;
+  }
+
+  nav {
+    padding: 0 0 0 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav .logo img {
+    height: 40px;
+    width: 40px;
+  }
+
+  nav label {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    right: 40px;
+    top: 30px;
+    z-index: 20;
+  }
+
+  nav label span {
+    display: block;
+    width: 24px;
+    height: 3px;
+    background: var(--color-white);
+    transition: var(--transition);
+  }
+
+  nav input:checked ~ label span:nth-child(2) {
+    display: none;
+  }
+
+  nav input:checked ~ label span {
+    transform-origin: center;
+    position: relative;
+  }
+
+  nav input:checked ~ label span:first-child {
+    transform: rotate(45deg);
+    top: 4px;
+  }
+
+  nav input:checked ~ label span:last-child {
+    transform: rotate(135deg);
+    top: -5px;
+  }
+
+  nav {
+    padding-top: 24px;
+  }
+
+  nav ul {
+    transform: translateX(150%);
+    transition: var(--transition);
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 254px;
+    padding-top: 100px;
+    z-index: 10;
+  }
+
+  nav input:checked ~ ul {
+    transform: translateX(0);
+  }
+
+  nav input:checked ~ ul li a span {
+    display: inline-block;
+  }
+  nav input:checked ~ ul li a:hover,
+  nav ul li a.active {
+    border-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .description {
+    margin: 0 auto;
+  }
+}

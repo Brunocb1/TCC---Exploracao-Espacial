@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explorando a NASA</title>
+  <link rel="stylesheet" href="../../styles/style.css">
+  <link rel="stylesheet" href="../../styles/responsive.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="../../assets/shared/logo.svg" alt="logo icon" />
+      </div>
+      <input type="checkbox" name="menu" id="menu" />
+      <label for="menu"><span></span><span></span><span></span></label>
+      <ul>
+        <li>
+          <a class="active" href="../../index.html"><span>00</span> Início</a>
+        </li>
+        <li>
+          <a href="../destination/destination.html"><span>01</span> Destino</a>
+        </li>
+        <li>
+          <a href="../crew/crew.html"><span>02</span> Equipe </a>
+        </li>
+        <li>
+          <a href="../technology/technology.html"><span>03</span> Tecnologia</a>
+        </li>
+        <li>
+          <a href="./pages/nasa/index.html"><span>04</span> NASA (Galeria)</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <div id="intro-message" class="intro-message">
+    <p>Bem-vindo ao Explore o Universo através da NASA! Use a caixa de pesquisa para descobrir imagens, vídeos e muito
+      mais sobre missões espaciais, planetas e cosmos direto da API da NASA. Basta digitar palavras-chave como 'Lua', 'Apollo', 'Terra', etc.
+      e clicar em 'Buscar'. "Escreva todas as palavras-chave em inglês."</p>
+  </div>
+
+  <h1>Explore o Universo através da NASA</h1>
+  <div id="higher">
+    <div id="researcher">
+      <input placeholder="Procurar... ex: Moon, Apollo, Earth, etc." id="researcher-input" type="text">
+      <button onclick="handleSearch()" id="researcher-button">Buscar</button>
+    </div>
+  </div>
+  <div id="img-box">
+
+  </div>
+  <div id="overlay" class="overlay"></div>
+  <div id="modal-box">
+    <span id="modal-closed" onclick="closeModal()">&times;</span>
+    <img id="img-modal" src="" alt="image Space">
+    <p id="description-modal"></p>
+
+  </div>
+  <footer>
+    <p class="attribution">
+      Criado para <a href="https://www.unicesumar.edu.br/" target="_blank">TCC- Unicesumar</a>.
+      Codificado por <a href="#">Bruno Santos</a>.
+    </p>
+  </footer>
+  <script src="../../scripts.js"></script>
+</body>
+
+</html>
